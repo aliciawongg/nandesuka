@@ -148,9 +148,12 @@ var kataChar = {
     72: 'ー',
 
 };
+// objectImages[level][levelImageIndex]
+// objectImages[m][b]
 
 var objectImages = [
-['images/ramune.jpg','images/anime2.jpg','images/salad.jpg','images/hotel2.png','images/cake.jpg'],
+
+    ['images/ramune.jpg','images/anime2.jpg','images/salad.jpg','images/hotel2.png','images/cake.jpg'],
 ['images/america.png','images/ramen.png','images/konbini.jpg','images/uniqlo.jpg','images/ketai.jpg','images/lavender.jpg']
 //level 3
 // []
@@ -207,10 +210,6 @@ var showBoard = function() {
         square.addEventListener('click',checkLetter);
     }
 };
-
-var currentWordKata = function() {
-
-}
 
 //click start button to display image, set word show board
 document.querySelector('#start').addEventListener('click', showImage);
