@@ -1,4 +1,4 @@
-###nandesuka
+### nandesuka
 
 This is a word game which aims to help beginner learners of the Japanese language familiarise themselves with the katakana characters.
 
