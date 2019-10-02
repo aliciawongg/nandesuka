@@ -177,6 +177,8 @@ var currentLevel = 1;;
 var numTries = 0;
 var correctLetter = 0;
 var numCorrect = 0;
+var playerScore = 0;
+
 var m = 0;
 var b = 0;
 
@@ -261,7 +263,12 @@ var checkLetter = function() {
             else {
                 console.log('nope');
                 document.querySelector('#displaymsg').style.visibility = 'visible';
-                document.querySelector('#displaymsg').innerHTML = 'nope!';
+                document.querySelector('#displaymsg').innerHTML = 'try again!';
+                document.querySelector('#player-guess').classList.add('error');
+                setTimeout(function() {
+                    document.querySelector('#player-guess').classList.remove('error')}, 300);
+                setTimeout(function() {
+                    document.querySelector('#displaymsg').innerHTML = ''}, 1500);
             }
 //check if the entire word is guessed correctly
         }
