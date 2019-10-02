@@ -42,8 +42,11 @@ body{
 
 }
 
-.timer {
-	color: #fff;
+#timer {
+	font-family: 'Overpass', sans-serif;
+	text-transform: lowercase;
+	font-size: 18px;
+	color: #E20377;
 }
 
 #object-image {
@@ -73,7 +76,7 @@ body{
 	text-transform: lowercase;
 	width: 100px;
 	height: 30px;
-	font-size: 16px;
+	font-size: 18px;
 	text-align: left;
 	color: #0C8203;
 	font-style: italic;
@@ -102,7 +105,6 @@ body{
 	visibility: hidden;
 	font-weight: bold;
 	font-size: 20px;
-	visibility: hidden;
 /*	background-color: grey;
 	border: 2px solid red;*/
 	width: 370px;
