@@ -177,10 +177,14 @@ var currentLevel = 1;;
 var numTries = 0;
 var correctLetter = 0;
 var numCorrect = 0;
-var playerScore = 0;
-
+var playerTotalScore = 0;
+var qnLevel1 = 5;
+var qnLevel2 = 6;
+var timeLeft = 10;
 var m = 0;
 var b = 0;
+
+
 
 //function to show first image and set first current word
 function showImage() {
@@ -196,6 +200,7 @@ function showImage() {
 //function to display the squares and add event listener
 var showBoard = function() {
     document.querySelector('#start').style.visibility = 'hidden';
+    document.querySelector('#instructionbutton').style.visibility = 'hidden';
     document.querySelector('#hintbutton').style.visibility = 'visible';
     document.querySelector('#player-guess').style.visibility = 'visible';
     document.querySelector('#helpbutton').style.visibility = 'visible';
@@ -216,6 +221,7 @@ var showBoard = function() {
 //click start button to display image, set word show board
 document.querySelector('#start').addEventListener('click', showImage);
 document.querySelector('#start').addEventListener('click', showBoard);
+document.querySelector('#start').addEventListener('click', trackTime);
 
 //function to check if letter selected is correct or wrong
 var checkLetter = function() {
@@ -287,7 +293,7 @@ var showHint = function() {
     console.log('it works');
     console.log(currentWord);
     document.querySelector('#hintmsg').innerHTML = currentWord.join('');
-    setTimeout(hideHint, 1000);
+    setTimeout(hideHint, 1200);
     console.log('hiding?');
 };
 
@@ -335,3 +341,16 @@ var changeImage = function() {
 };
 
 document.querySelector('#next').addEventListener('click', changeImage);
+
+var trackTime = setInterval(countdown, 1000);
+
+function countdown() {
+    if (timeLeft == 0) {
+        document.querySelector('#timer').innerHTML = timeLeft;
+    } else {
+        timeLeft -= 1;
+        console.log(timeLeft);
+        document.querySelector('#timer').innerHTML = timeLeft;
+    }
+
+}
