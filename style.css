@@ -1,5 +1,6 @@
 body{
-  background: url(images/background-cement-concrete-242236.jpg);
+  /*background: url(images/background-cement-concrete-242236.jpg);*/
+  background-color: #1f2833 !important;
   background-repeat: no-repeat;
   background-size: cover;
  }
@@ -21,7 +22,7 @@ body{
 
 .title{
 	font-family: 'Krona One', sans-serif;
-	color:#7FB4F2;
+	color:#66fcf1;
 /*	color: #FFFFFF;*/
 	text-transform: uppercase;
 	font-size: 45px;
@@ -31,9 +32,9 @@ body{
 
 .subtitle{
 	font-family: 'Overpass', sans-serif;
-	color: #024DA5;
+	color: #c5c6c7;
 	text-transform: lowercase;
-	font-size: 18px;
+	font-size: 25px;
 	font-weight: bold;
 	font-style: italic;
 	margin-top: -5px;
@@ -74,14 +75,17 @@ body{
 #player-guess {
 	visibility: hidden;
 	display: inline-block;
-	background-color: #868786;
+/*	background-color: #868786;*/
+	border-color: #45a29e;
 	width: 80%;
 	height: 45px;
 	font-size: 30px;
 	text-align: center;
-	color: #E7E7E7;
+	color: #c5c6c7;
 	margin-top: 10px;
 	border-radius: 2%;
+	border-width: 2px;
+	border-style: solid;
 }
 
 #displaymsg {
@@ -121,10 +125,14 @@ body{
 	font-size: 26px;
 /*	font-weight: bold;*/
 	text-align: center;
+	cursor: pointer;
 }
 
 .square:hover {
-  background-color: #CAE128;
+  background-color: #45a29e;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 /*buttons*/
